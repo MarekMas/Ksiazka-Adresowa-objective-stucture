@@ -4,3 +4,4 @@ obj/
 ks-strukt.cpp
 *.uxf
 *.depend
+*.txt

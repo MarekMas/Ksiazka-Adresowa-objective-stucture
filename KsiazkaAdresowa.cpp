@@ -1,14 +1,22 @@
 #include "KsiazkaAdresowa.h"
 #include <windows.h>
+#include <fstream>
+#include <sstream>
+
 
 using namespace std;
+
+KsiazkaAdresowa::KsiazkaAdresowa()
+{
+     nazwaPlikuZUzytkownikami = "Uzytkownicy.txt";
+}
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
 {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
     uzytkownicy.push_back(uzytkownik);
-    //dopiszUzytkownikaDoPliku(uzytkownik);
+    dopiszUzytkownikaDoPliku(uzytkownik);
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
@@ -75,7 +83,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
     }
 }
 
-/*void KsiazkaAdresowa::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
+void KsiazkaAdresowa::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik)
 {
     fstream plikTekstowy;
     string liniaZDanymiUzytkownika = "";
@@ -97,4 +105,33 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
     else
         cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZUzytkownikami << " i zapisac w nim danych." << endl;
     plikTekstowy.close();
-}*/
+}
+
+string KsiazkaAdresowa::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)
+{
+    string liniaZDanymiUzytkownika = "";
+
+    liniaZDanymiUzytkownika += konwerjsaIntNaString(uzytkownik.pobierzId())+ '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzLogin() + '|';
+    liniaZDanymiUzytkownika += uzytkownik.pobierzHaslo() + '|';
+
+    return liniaZDanymiUzytkownika;
+}
+
+
+bool KsiazkaAdresowa::czyPlikJestPusty(fstream &plikTekstowy)
+{
+    plikTekstowy.seekg(0, ios::end);
+    if (plikTekstowy.tellg() == 0)
+        return true;
+    else
+        return false;
+}
+
+string KsiazkaAdresowa::konwerjsaIntNaString(int liczba)
+{
+    ostringstream ss;
+    ss << liczba;
+    string str = ss.str();
+    return str;
+}
