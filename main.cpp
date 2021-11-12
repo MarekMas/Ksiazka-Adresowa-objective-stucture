@@ -1,9 +1,13 @@
 #include <iostream>
+#include "KsiazkaAdresowa.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    KsiazkaAdresowa ks1;
+    ks1.rejestracjaUzytkownika();
+    ks1.rejestracjaUzytkownika();
+    ks1.wypiszWszystkichUzytkownikow();
     return 0;
 }

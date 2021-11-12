@@ -3,3 +3,5 @@ obj/
 *.cbp
 ks-strukt.cpp
 *.uxf
+*.depend
+*.txt
