@@ -60,3 +60,8 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
     return false;
 }
 
+void UzytkownikMenager::wczytajUzytkownikowZPliku()
+{
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+}
+
