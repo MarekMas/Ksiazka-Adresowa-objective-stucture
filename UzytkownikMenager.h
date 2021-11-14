@@ -27,5 +27,6 @@ public:
     void wypiszIdZalogowanegUzytkownika(); //testowa
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
 };
 #endif // UZYTKOWNIKMENAGER_H

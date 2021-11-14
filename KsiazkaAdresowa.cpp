@@ -4,7 +4,6 @@ KsiazkaAdresowa::KsiazkaAdresowa(string nazwaPlikuZUzytkownikami)
 : uzytkownikMenager(nazwaPlikuZUzytkownikami)
 {
     uzytkownikMenager.wczytajUzytkownikowZPliku();
-
 }
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
@@ -31,4 +30,9 @@ void KsiazkaAdresowa::zmiannaHaslaUzytkownika()
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenager.wylogowanieUzytkownika();
+}
+
+void KsiazkaAdresowa::dodajAdresata()
+{
+    adresatMenager.dodajAdresata(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
 }
