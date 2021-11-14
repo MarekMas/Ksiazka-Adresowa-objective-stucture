@@ -23,3 +23,7 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     uzytkownikMenager.wypiszIdZalogowanegUzytkownika();
 
 }
+void KsiazkaAdresowa::zmiannaHaslaUzytkownika()
+{
+    uzytkownikMenager.zmianaHaslaZalogowanegoUzytkownika();
+}

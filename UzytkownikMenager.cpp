@@ -3,7 +3,7 @@
 UzytkownikMenager::UzytkownikMenager(string nazwaPlikuZUzytkownikami)
 : plikZUzytkownikami(nazwaPlikuZUzytkownikami)
 {
-
+    idZalogowanegoUzytkownika = 0;
 }
 
 void UzytkownikMenager::rejestracjaUzytkownika()
@@ -109,6 +109,31 @@ void UzytkownikMenager::logowanieUzytkownika()
 void UzytkownikMenager::wypiszIdZalogowanegUzytkownika()
 {
     cout << idZalogowanegoUzytkownika << endl;
+}
+
+void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
+{
+    if(idZalogowanegoUzytkownika == 0)
+    {
+       cout << "Zaden uzytkownik nie jest zalogowany" << endl;
+       return;
+    }
+
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = MetodyPomocnicze::wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr -> pobierzId() == idZalogowanegoUzytkownika)
+        {
+            itr -> ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+    //zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+
 }
 
 

@@ -25,5 +25,6 @@ public:
     void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
     void wypiszIdZalogowanegUzytkownika(); //testowa
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 #endif // UZYTKOWNIKMENAGER_H
