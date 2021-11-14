@@ -10,7 +10,8 @@ int main()
     //ks1.rejestracjaUzytkownika();
     ks1.wypiszWszystkichUzytkownikow();
     ks1.logowanieUzytkownika();
+    ks1.wylogowanieUzytkownika();
     ks1.zmiannaHaslaUzytkownika();
-    ks1.wypiszWszystkichUzytkownikow();
+    //ks1.wypiszWszystkichUzytkownikow();
     return 0;
 }

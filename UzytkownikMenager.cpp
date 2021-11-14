@@ -136,5 +136,10 @@ void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()
 
 }
 
+void UzytkownikMenager::wylogowanieUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+
 
 
