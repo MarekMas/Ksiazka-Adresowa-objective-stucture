@@ -9,5 +9,6 @@ int main()
     ks1.rejestracjaUzytkownika();
     ks1.rejestracjaUzytkownika();
     ks1.wypiszWszystkichUzytkownikow();
+    ks1.logowanieUzytkownika();
     return 0;
 }
