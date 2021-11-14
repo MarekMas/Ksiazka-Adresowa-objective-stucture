@@ -21,7 +21,11 @@ class UzytkownikMenager
 public:
     UzytkownikMenager(string);
     void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
+    void wypiszWszystkichUzytkownikow();// testowa
     void wczytajUzytkownikowZPliku();
+    void logowanieUzytkownika();
+    void wypiszIdZalogowanegUzytkownika(); //testowa
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogowanieUzytkownika();
 };
 #endif // UZYTKOWNIKMENAGER_H

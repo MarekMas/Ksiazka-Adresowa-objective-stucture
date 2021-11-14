@@ -14,5 +14,8 @@ public:
     KsiazkaAdresowa(string);
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
+    void logowanieUzytkownika();
+    void zmiannaHaslaUzytkownika();
+    void wylogowanieUzytkownika();
 };
 #endif // KSIAZKAADRESOWA_H
