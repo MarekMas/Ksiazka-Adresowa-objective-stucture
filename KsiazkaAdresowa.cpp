@@ -1,8 +1,10 @@
 #include "KsiazkaAdresowa.h"
 
-KsiazkaAdresowa::KsiazkaAdresowa()
+KsiazkaAdresowa::KsiazkaAdresowa(string nazwaPlikuZUzytkownikami)
+: uzytkownikMenager(nazwaPlikuZUzytkownikami)
 {
     uzytkownikMenager.wczytajUzytkownikowZPliku();
+
 }
 
 void KsiazkaAdresowa::rejestracjaUzytkownika()
