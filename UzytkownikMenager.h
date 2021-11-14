@@ -19,8 +19,9 @@ class UzytkownikMenager
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 public:
-     void rejestracjaUzytkownika();
-     void wypiszWszystkichUzytkownikow();
-     void wczytajUzytkownikowZPliku();
+    UzytkownikMenager(string);
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
+    void wczytajUzytkownikowZPliku();
 };
 #endif // UZYTKOWNIKMENAGER_H
