@@ -6,6 +6,7 @@
 #include <windows.h>
 #include "PlikZUzytkownikami.h"
 #include "MetodyPomcnicze.h"
+#include "AdresatMenager.h"
 
 using namespace std;
 

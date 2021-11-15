@@ -2,7 +2,7 @@
 
 AdresatMenager::AdresatMenager()
 {
-    idOstatniegoAdresata = 1;
+
 }
 
 void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
@@ -14,7 +14,7 @@ void AdresatMenager::dodajAdresata(int idZalogowanegoUzytkownika)
     adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
 
     adresaci.push_back(adresat);
-    //dopiszAdresataDoPliku(adresat);
+    plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
     idOstatniegoAdresata ++;
 }
@@ -44,4 +44,9 @@ Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
     adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
 
     return adresat;
+}
+
+void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownika(int idZalogowanegoUzytkownika)
+{
+    idOstatniegoAdresata = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, idZalogowanegoUzytkownika);
 }
