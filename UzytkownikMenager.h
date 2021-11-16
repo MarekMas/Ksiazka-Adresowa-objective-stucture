@@ -1,11 +1,8 @@
 #ifndef UZYTKOWNIKMENAGER_H
 #define UZYTKOWNIKMENAGER_H
 
-#include <iostream>
-#include <vector>
 #include <windows.h>
 #include "PlikZUzytkownikami.h"
-#include "MetodyPomcnicze.h"
 
 using namespace std;
 
@@ -27,5 +24,6 @@ public:
     void wypiszIdZalogowanegUzytkownika(); //testowa
     void zmianaHaslaZalogowanegoUzytkownika();
     void wylogowanieUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
 };
 #endif // UZYTKOWNIKMENAGER_H

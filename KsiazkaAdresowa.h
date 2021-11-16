@@ -1,14 +1,15 @@
 #ifndef KSIAZKAADRESOWA22
 #define KSIAZKAADRESOWA22
 
-#include <iostream>
 #include "UzytkownikMenager.h"
+#include "AdresatMenager.h"
 
 using namespace std;
 
 class KsiazkaAdresowa
 {
     UzytkownikMenager uzytkownikMenager;
+    AdresatMenager adresatMenager;
 
 public:
     KsiazkaAdresowa(string);
@@ -17,5 +18,7 @@ public:
     void logowanieUzytkownika();
     void zmiannaHaslaUzytkownika();
     void wylogowanieUzytkownika();
+    void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 #endif // KSIAZKAADRESOWA_H

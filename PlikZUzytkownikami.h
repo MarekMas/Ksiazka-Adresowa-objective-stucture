@@ -1,7 +1,6 @@
 #ifndef PLIKZURZYTKOWNIKAMI_H
 #define PLIKZURZYTKOWNIKAMI_H
 
-#include <iostream>
 #include <fstream>
 #include <vector>
 #include "Uzytkownik.h"
@@ -14,7 +13,7 @@ class PlikZUzytkownikami
 {
     const string nazwaPlikuZUzytkownikami;
 
-    bool czyPlikJestPusty();
+    bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 

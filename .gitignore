@@ -6,3 +6,4 @@ ks-strukt.cpp
 *.depend
 *.txt
 *.layout
+*.cscope_file_list
