@@ -1,12 +1,7 @@
 #ifndef ADRESATMENAGER_H
 #define ADRESATMENAGER_H
 
-#include <iostream>
-#include "Adresat.h"
-#include "vector"
 #include "PlikZAdresatami.h"
-#include "MetodyPomcnicze.h"
-#include "UzytkownikMenager.h"
 
 class AdresatMenager
 {
@@ -17,10 +12,12 @@ class AdresatMenager
 
 
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    void wyswietlDaneAdresata(Adresat adresat);
 public:
-    AdresatMenager();
     void dodajAdresata(int idZalogowanegoUzytkownika);
     void wczytajAdresatowZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
+    void usunAdresatow();
+    void wyswietlWszystkichAdresatow();
 
 };
 #endif // ADRESATMENAGER_H

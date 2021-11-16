@@ -1,12 +1,8 @@
 #ifndef UZYTKOWNIKMENAGER_H
 #define UZYTKOWNIKMENAGER_H
 
-#include <iostream>
-#include <vector>
 #include <windows.h>
 #include "PlikZUzytkownikami.h"
-#include "MetodyPomcnicze.h"
-#include "AdresatMenager.h"
 
 using namespace std;
 

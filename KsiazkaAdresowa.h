@@ -1,7 +1,6 @@
 #ifndef KSIAZKAADRESOWA22
 #define KSIAZKAADRESOWA22
 
-#include <iostream>
 #include "UzytkownikMenager.h"
 #include "AdresatMenager.h"
 
@@ -20,5 +19,6 @@ public:
     void zmiannaHaslaUzytkownika();
     void wylogowanieUzytkownika();
     void dodajAdresata();
+    void wyswietlWszystkichAdresatow();
 };
 #endif // KSIAZKAADRESOWA_H

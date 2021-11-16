@@ -31,9 +31,15 @@ void KsiazkaAdresowa::zmiannaHaslaUzytkownika()
 void KsiazkaAdresowa::wylogowanieUzytkownika()
 {
     uzytkownikMenager.wylogowanieUzytkownika();
+    adresatMenager.usunAdresatow();
 }
 
 void KsiazkaAdresowa::dodajAdresata()
 {
     adresatMenager.dodajAdresata(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
+}
+
+void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
+{
+    adresatMenager.wyswietlWszystkichAdresatow();
 }

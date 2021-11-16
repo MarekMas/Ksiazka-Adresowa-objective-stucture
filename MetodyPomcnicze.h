@@ -14,6 +14,7 @@ public:
     int static konwersjaStringNaInt(string liczba);
     string static wczytajLinie();
     string static zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    string static pobierzLiczbe(string tekst, int pozycjaZnaku);
 
 };
 #endif // METODYPOMOCNICZE_H
