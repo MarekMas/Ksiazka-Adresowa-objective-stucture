@@ -5,18 +5,21 @@
 
 class AdresatMenager
 {
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idOstatniegoAdresata;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
 
 
 
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
+    Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
 public:
-    void dodajAdresata(int idZalogowanegoUzytkownika);
-    void wczytajAdresatowZalogowanegoUzytkownika(int idZalogowanegoUzytkownika);
-    void usunAdresatow();
+    AdresatMenager (int idZalogowanegoUzytkownika, string nazwaPlikuZAdresatami)
+    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami){}
+
+    void dodajAdresata();
+    void wczytajAdresatowZalogowanegoUzytkownika();
     void wyswietlWszystkichAdresatow();
 
 };

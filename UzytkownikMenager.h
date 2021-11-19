@@ -13,13 +13,16 @@ class UzytkownikMenager
     PlikZUzytkownikami plikZUzytkownikami;
 
     Uzytkownik podajDaneNowegoUzytkownika();
-    int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
 public:
-    UzytkownikMenager(string);
+    UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+    {
+        idZalogowanegoUzytkownika = 0;
+        uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
+    }
+    int pobierzIdNowegoUzytkownika();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();// testowa
-    void wczytajUzytkownikowZPliku();
     void logowanieUzytkownika();
     void wypiszIdZalogowanegUzytkownika(); //testowa
     void zmianaHaslaZalogowanegoUzytkownika();

@@ -1,10 +1,5 @@
 #include "UzytkownikMenager.h"
 
-UzytkownikMenager::UzytkownikMenager(string nazwaPlikuZUzytkownikami)
-: plikZUzytkownikami(nazwaPlikuZUzytkownikami)
-{
-    idZalogowanegoUzytkownika = 0;
-}
 
 void UzytkownikMenager::rejestracjaUzytkownika()
 {
@@ -63,11 +58,6 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
         }
     }
     return false;
-}
-
-void UzytkownikMenager::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
 void UzytkownikMenager::logowanieUzytkownika()
