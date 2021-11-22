@@ -16,8 +16,8 @@ void AdresatMenager::dodajAdresata()
 Adresat AdresatMenager::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-
-    adresat.ustawId(++idOstatniegoAdresata);
+    int idNastepnegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata() + 1;
+    adresat.ustawId(idNastepnegoAdresata);
     adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
@@ -38,12 +38,6 @@ Adresat AdresatMenager::podajDaneNowegoAdresata()
     adresat.ustawAdres(MetodyPomocnicze::wczytajLinie());
 
     return adresat;
-}
-
-void AdresatMenager::wczytajAdresatowZalogowanegoUzytkownika()
-
-{
-    idOstatniegoAdresata = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(adresaci, ID_ZALOGOWANEGO_UZYTKOWNIKA);
 }
 
 void AdresatMenager::wyswietlWszystkichAdresatow()

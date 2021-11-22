@@ -16,7 +16,7 @@ void UzytkownikMenager::wypiszWszystkichUzytkownikow()
 {
     for(int i = 0; i < uzytkownicy.size(); i++)
     {
-        cout << uzytkownicy[i].pobierzLogin() << " " << uzytkownicy[i].pobierzHaslo() << endl;
+        cout << uzytkownicy[i].pobierzId() << " " << uzytkownicy[i].pobierzLogin() << " " << uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
 

@@ -1,16 +1,6 @@
 #include "Adresat.h"
 
-Adresat::Adresat()
-{
-    id = 0;
-    idUzytkownika = 0;
-    imie = "";
-    nazwisko = "";
-    numerTelefonu = "";
-    email = "";
-    adres = "";
 
-}
 int Adresat::pobierzId()
 {
     return id;

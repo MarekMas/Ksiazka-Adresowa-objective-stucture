@@ -13,9 +13,9 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
-    if(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() > 0)
-        adresatMenager = new AdresatMenager(uzytkownikMenager.pobierzIdNowegoUzytkownika(),NAZWA_PLIKU_Z_ADRESATAMI);
 
+    if(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika() > 0)
+        adresatMenager = new AdresatMenager(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika(),NAZWA_PLIKU_Z_ADRESATAMI);
 }
 void KsiazkaAdresowa::zmiannaHaslaUzytkownika()
 {

@@ -6,7 +6,6 @@
 class AdresatMenager
 {
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
-    int idOstatniegoAdresata;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
 
@@ -16,10 +15,12 @@ class AdresatMenager
     void wyswietlDaneAdresata(Adresat adresat);
 public:
     AdresatMenager (int idZalogowanegoUzytkownika, string nazwaPlikuZAdresatami)
-    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami){}
+    : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami)
+    {
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
+    }
 
     void dodajAdresata();
-    void wczytajAdresatowZalogowanegoUzytkownika();
     void wyswietlWszystkichAdresatow();
 
 };
