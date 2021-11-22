@@ -1,10 +1,5 @@
 #include "UzytkownikMenager.h"
 
-UzytkownikMenager::UzytkownikMenager(string nazwaPlikuZUzytkownikami)
-: plikZUzytkownikami(nazwaPlikuZUzytkownikami)
-{
-    idZalogowanegoUzytkownika = 0;
-}
 
 void UzytkownikMenager::rejestracjaUzytkownika()
 {
@@ -21,7 +16,7 @@ void UzytkownikMenager::wypiszWszystkichUzytkownikow()
 {
     for(int i = 0; i < uzytkownicy.size(); i++)
     {
-        cout << uzytkownicy[i].pobierzLogin() << " " << uzytkownicy[i].pobierzHaslo() << endl;
+        cout << uzytkownicy[i].pobierzId() << " " << uzytkownicy[i].pobierzLogin() << " " << uzytkownicy[i].pobierzHaslo() << endl;
     }
 }
 
@@ -63,11 +58,6 @@ bool UzytkownikMenager::czyIstniejeLogin(string login)
         }
     }
     return false;
-}
-
-void UzytkownikMenager::wczytajUzytkownikowZPliku()
-{
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
 void UzytkownikMenager::logowanieUzytkownika()
