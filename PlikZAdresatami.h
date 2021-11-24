@@ -32,5 +32,6 @@ public:
     void dopiszAdresataDoPliku(Adresat adresat);
     vector<Adresat> wczytajAdresatowZalogowanegoUzytkownikaZPliku(int idZalogowanegoUzytkownika);
     void usunWybranegoAdresataZPliku(int idUsunietegoAdresata);
+    void edytujDaneWybranegoAdresataWPliku(Adresat adresat);
 };
 #endif // PLIKZADRESATAMI_H
