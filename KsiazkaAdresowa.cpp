@@ -38,3 +38,8 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenager->wyswietlWszystkichAdresatow();
 }
+
+void KsiazkaAdresowa::usunAdresata()
+{
+    adresatMenager->usunAdresata();
+}
