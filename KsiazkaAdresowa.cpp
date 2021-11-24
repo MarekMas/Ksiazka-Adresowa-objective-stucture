@@ -48,3 +48,13 @@ void KsiazkaAdresowa::edytujAdresata()
 {
     adresatMenager->edytujAdresata();
 }
+
+void KsiazkaAdresowa::wyszukajAdresatowPoImieniu()
+{
+    adresatMenager->wyszukajAdresatowPoImieniu();
+}
+
+void KsiazkaAdresowa::wyszukajAdresatowPoNazwisku()
+{
+    adresatMenager->wyszukajAdresatowPoNazwisku();
+}

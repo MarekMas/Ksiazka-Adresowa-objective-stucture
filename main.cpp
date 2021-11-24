@@ -11,14 +11,12 @@ int main()
     ks1.logowanieUzytkownika();
     //ks1.zmiannaHaslaUzytkownika();
     ks1.wyswietlWszystkichAdresatow();
+    ks1.wyszukajAdresatowPoImieniu();
+    ks1.wyszukajAdresatowPoNazwisku();
     //ks1.dodajAdresata();
     //ks1.wyswietlWszystkichAdresatow();
     //ks1.wylogowanieUzytkownika();
-    ks1.edytujAdresata();
-    ks1.wyswietlWszystkichAdresatow();
-    ks1.edytujAdresata();
-    ks1.wyswietlWszystkichAdresatow();
-
+    //ks1.edytujAdresata();
 
     return 0;
 }
