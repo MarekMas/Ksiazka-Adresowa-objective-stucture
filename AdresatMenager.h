@@ -10,9 +10,11 @@ class AdresatMenager
     PlikZAdresatami plikZAdresatami;
 
 
-
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat adresat);
+    int podajIdWybranegoAdresata();
+    char wybierzOpcjeZMenuEdycja();
+    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 public:
     AdresatMenager (int idZalogowanegoUzytkownika, string nazwaPlikuZAdresatami)
     : ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami)
@@ -22,6 +24,10 @@ public:
 
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
+    void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
 
 };
 #endif // ADRESATMENAGER_H

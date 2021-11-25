@@ -12,14 +12,6 @@ void UzytkownikMenager::rejestracjaUzytkownika()
     system("pause");
 }
 
-void UzytkownikMenager::wypiszWszystkichUzytkownikow()
-{
-    for(int i = 0; i < uzytkownicy.size(); i++)
-    {
-        cout << uzytkownicy[i].pobierzId() << " " << uzytkownicy[i].pobierzLogin() << " " << uzytkownicy[i].pobierzHaslo() << endl;
-    }
-}
-
 Uzytkownik UzytkownikMenager::podajDaneNowegoUzytkownika()
 {
     Uzytkownik uzytkownik;
@@ -95,11 +87,6 @@ void UzytkownikMenager::logowanieUzytkownika()
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
     return;
-}
-
-void UzytkownikMenager::wypiszIdZalogowanegUzytkownika()
-{
-    cout << idZalogowanegoUzytkownika << endl;
 }
 
 void UzytkownikMenager::zmianaHaslaZalogowanegoUzytkownika()

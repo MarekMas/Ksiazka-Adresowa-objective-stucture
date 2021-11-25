@@ -15,6 +15,8 @@ public:
     string static wczytajLinie();
     string static zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     string static pobierzLiczbe(string tekst, int pozycjaZnaku);
+    char static wczytajZnak();
+    int static wczytajLiczbeCalkowita();
 
 };
 #endif // METODYPOMOCNICZE_H

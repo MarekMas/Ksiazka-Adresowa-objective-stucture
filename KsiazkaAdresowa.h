@@ -24,11 +24,17 @@ public:
     }
 
     void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
     void zmiannaHaslaUzytkownika();
     void wylogowanieUzytkownika();
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
+    void usunAdresata();
+    void edytujAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    bool czyUzytkownikJestZalogowany();
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 };
 #endif // KSIAZKAADRESOWA_H
