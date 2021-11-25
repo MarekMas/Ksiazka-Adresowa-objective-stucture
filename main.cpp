@@ -43,7 +43,6 @@ int main()
         }
         else
         {
-
             switch (ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika())
             {
             case '1':

@@ -5,21 +5,19 @@
 #include <vector>
 #include "Uzytkownik.h"
 #include "MetodyPomcnicze.h"
+#include "PlikTekstowy.h"
 
 
 using namespace std;
 
-class PlikZUzytkownikami
+class PlikZUzytkownikami:public PlikTekstowy
 {
-    const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
-
-    bool czyPlikJestPusty(fstream &plikTekstowy);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     Uzytkownik pobierzDaneUzytkownika(string daneJednegoUzytkownikaOddzielonePionowymiKreskami);
 
 public:
     PlikZUzytkownikami(string nazwaPlikuZUzytkownikami)
-    :NAZWA_PLIKU_Z_UZYTKOWNIKAMI(nazwaPlikuZUzytkownikami) {}
+    :PlikTekstowy(nazwaPlikuZUzytkownikami) {}
 
     void dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik);
     vector<Uzytkownik> wczytajUzytkownikowZPliku();
