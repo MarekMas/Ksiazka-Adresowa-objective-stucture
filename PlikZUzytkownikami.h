@@ -8,6 +8,7 @@
 #include "PlikTekstowy.h"
 
 
+
 using namespace std;
 
 class PlikZUzytkownikami:public PlikTekstowy
