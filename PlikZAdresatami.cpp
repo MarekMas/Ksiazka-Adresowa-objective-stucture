@@ -149,7 +149,7 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsunietegoAdresata)//nrl
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
     string wczytanaLinia = "";
     int numerWczytanejLinii = 1;
-    bool adresatZostalUsuniety = true;
+    bool adresatZostalUsuniety = false;
 
     odczytywanyPlikTekstowy.open(NAZWA_PLIKU.c_str(), ios::in);
     tymczasowyPlikTekstowy.open(NAZWA_TYMCZASOWEGO_PLIKU_Z_ADRESATAMI.c_str(), ios::out | ios::app);
@@ -162,7 +162,6 @@ void PlikZAdresatami::usunWybranegoAdresataZPliku(int idUsunietegoAdresata)//nrl
             // aby na koncu pliku nie bylo pustej linii
              if(idUsunietegoAdresata == pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia))
                 adresatZostalUsuniety = true;
-            //if (numerWczytanejLinii == numerUsuwanejLinii) {}
             else if (numerWczytanejLinii == 1)
                 tymczasowyPlikTekstowy << wczytanaLinia;
             else if (numerWczytanejLinii == 2 && adresatZostalUsuniety == true)
